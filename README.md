@@ -6,8 +6,10 @@
 
 To run this web application, start the MAMP server. Select the application and run on localhost. 
 
-***** DATABASE INFORMATION:
+DATABASE INFORMATION:
 Create the database using PHPAdmin. The following are the tables used in this application:
+
+1. Table for Camps: 
 
 DROP TABLE IF EXISTS `camps_db`;
 CREATE TABLE `camps_db` (
@@ -26,9 +28,10 @@ INSERT INTO `camps_db` (`camp_id`, `camp_name`, `cost`, `address`, `phone_number
 ('1', 'Cedar Hill Stateparks', '$200', 'TX', '1231231231', 'Birding, Biking, Fishing & Camping', '01-01-2017', '12-31-2018', 'cedar.jpg'),
 ('2', 'Arcadia Lake', '$500', 'OK', '4564564564', 'Scenic view with Tent sites and Camping grounds', '12-02-2018', '12-01-2019', 'arcadia.jpg');
 
-ALTER TABLE `camps_db`
-  ADD PRIMARY KEY (`camp_id`);
-----------------------------------------
+ALTER TABLE `camps_db` ADD PRIMARY KEY (`camp_id`);
+
+2. Table for Cart:
+
 DROP TABLE IF EXISTS `cart`;
 CREATE TABLE `cart` (
   `username` varchar(30) NOT NULL,
@@ -38,9 +41,9 @@ CREATE TABLE `cart` (
   `end_date` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-ALTER TABLE `cart`
-  ADD PRIMARY KEY (`username`,`camp_id`);  
-----------------------------------------
+ALTER TABLE `cart` ADD PRIMARY KEY (`username`,`camp_id`);  
+
+3. Table for User's Camps:
 DROP TABLE IF EXISTS `user_camps_db`;
 CREATE TABLE `user_camps_db` (
   `username` varchar(30) NOT NULL,
@@ -52,9 +55,10 @@ INSERT INTO `user_camps_db` (`username`, `camp_id`) VALUES
 ('alice', '2'),
 ('bernard', '1');
 
-ALTER TABLE `user_camps_db`
-  ADD PRIMARY KEY (`username`,`camp_id`);
-----------------------------------------
+ALTER TABLE `user_camps_db` ADD PRIMARY KEY (`username`,`camp_id`);
+
+4. Table for Users:
+
 DROP TABLE IF EXISTS `users_db`;
 CREATE TABLE `users_db` (
   `username` varchar(30) NOT NULL,
@@ -71,9 +75,8 @@ INSERT INTO `users_db` (`username`, `name`, `password`, `email_address`, `role`)
 ('s', 's', 'a0c56f6e1681b38171a42e2e91c33b31', 's@gmail.com', 'admin'),
 ('v', 'v', 'a52fd8cdeb70f9c5fc08b97f84a5577b', 'v.bb@gmail.com', 'admin');
 
-ALTER TABLE `users_db`
-  ADD PRIMARY KEY (`username`);
-----------------------------------------
+ALTER TABLE `users_db` ADD PRIMARY KEY (`username`);
+
 
 Note: All camp images and names have been taken from Google.
   
