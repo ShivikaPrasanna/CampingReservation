@@ -44,6 +44,7 @@ CREATE TABLE `cart` (
 ALTER TABLE `cart` ADD PRIMARY KEY (`username`,`camp_id`);  
 
 3. Table for User's Camps:
+
 DROP TABLE IF EXISTS `user_camps_db`;
 CREATE TABLE `user_camps_db` (
   `username` varchar(30) NOT NULL,
@@ -78,5 +79,5 @@ INSERT INTO `users_db` (`username`, `name`, `password`, `email_address`, `role`)
 ALTER TABLE `users_db` ADD PRIMARY KEY (`username`);
 
 
-Note: All camp images and names have been taken from Google.
+Note: Names and Email IDs above are intended to be dummy values only. All camp images and names have been taken from Google.  
   
