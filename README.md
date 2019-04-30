@@ -2,6 +2,7 @@
 - Camping reservation for new or returning users to make reservation for camps. 
 - Admins have additional rights to modify camp information such as the cost or add/delete a camp. 
 - This is a prototype for a web application that uses HTML5, CSS, Bootstrap, Javascript and PHP.
+- The database is in 3NF.
 - Please note: the password uses MD5 hashing technique.
 
 To run this web application, start the MAMP server. Select the application and run on localhost. 
