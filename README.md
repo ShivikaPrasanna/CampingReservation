@@ -10,6 +10,7 @@ To run this web application, start the MAMP server. Select the application and r
 DATABASE INFORMATION:
 Create the database using PHPAdmin. The following are the tables used in this application:
 
+```
 1. Table for Camps: 
 
 DROP TABLE IF EXISTS `camps_db`;
@@ -78,7 +79,7 @@ INSERT INTO `users_db` (`username`, `name`, `password`, `email_address`, `role`)
 ('v', 'v', 'a52fd8cdeb70f9c5fc08b97f84a5577b', 'v.bb@gmail.com', 'admin');
 
 ALTER TABLE `users_db` ADD PRIMARY KEY (`username`);
-
+```
 
 Note: Names and Email IDs above are intended to be dummy values only. All camp images and names have been taken from Google.  
   
